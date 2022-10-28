@@ -13,8 +13,56 @@ namespace Programa1.Dados
         public string Telefone;
         public string CPF;
 
+       /// <summary>
+       /// Constructor com varios parametos
+       /// </summary>
+       /// <param name="nome"> insira o nome do Objeto</param>
+       /// <param name="telefone"> insira o telefone do Objeto</param>
+       /// <param name="cpf"> insira o cpf do Objeto</param>
+        public Cliente (string nome, string telefone, string cpf)
+        {
+            this.Nome = nome;
+            this.Telefone = telefone;
+            this.CPF = cpf;
+        }
+
+
+        /// <summary>
+        /// Construtor da classe com parametro diferente
+        /// </summary>
+        /// <param name="telefone">Para preencher o telefone do Objeto</param>
+        public Cliente( int telefone)
+        {
+            this.Telefone = telefone.ToString();
+        }
+
+       
+        /// <summary>
+        /// Construtor sem parametros
+        /// </summary>
+        public Cliente() { }
+        
+
         public void Gravar()
         {
+            var clientes = Cliente.ListaDeClientes();
+            clientes.Add(this);
+
+            if (File.Exists(PastaBaseDeDados()))
+            {
+               StreamWriter r = new StreamWriter(PastaBaseDeDados());
+               string Conteudo = "nome;telefone;cpf;";
+                r.WriteLine(Conteudo);
+                foreach (Cliente a in clientes)
+                {
+                    var linha = a.Nome + "; " + a.Telefone + "; " + a.CPF + ";";
+                    r.WriteLine(linha);
+                }
+                r.Close();
+                 
+            }
+
+
 
         }
         private static string PastaBaseDeDados()
@@ -38,10 +86,14 @@ namespace Programa1.Dados
                         i++;
                         if (i == 1) continue;
                         var ClienteArquivo = linha.Split(";");
-                        var cliente = new Cliente();
-                        cliente.Nome = ClienteArquivo[0];
-                        cliente.Telefone = ClienteArquivo[1];
-                        cliente.CPF = ClienteArquivo[2];
+                        var cliente = new Cliente {
+
+                            Nome = ClienteArquivo[0],
+                            Telefone = ClienteArquivo[1],
+                            CPF = ClienteArquivo[2],
+                                                 
+                        };
+                        
 
                         Clientes.Add(cliente);
                     }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\aline\\source\\repos\\constantes\\constantes\\Programa1.csproj": {}
+    "C:\\Users\\aline\\source\\repos\\Estudo\\PrimeiroPrograma\\Programa1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\aline\\source\\repos\\constantes\\constantes\\Programa1.csproj": {
+    "C:\\Users\\aline\\source\\repos\\Estudo\\PrimeiroPrograma\\Programa1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aline\\source\\repos\\constantes\\constantes\\Programa1.csproj",
+        "projectUniqueName": "C:\\Users\\aline\\source\\repos\\Estudo\\PrimeiroPrograma\\Programa1.csproj",
         "projectName": "Programa1",
-        "projectPath": "C:\\Users\\aline\\source\\repos\\constantes\\constantes\\Programa1.csproj",
+        "projectPath": "C:\\Users\\aline\\source\\repos\\Estudo\\PrimeiroPrograma\\Programa1.csproj",
         "packagesPath": "C:\\Users\\aline\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aline\\source\\repos\\constantes\\constantes\\obj\\",
+        "outputPath": "C:\\Users\\aline\\source\\repos\\Estudo\\PrimeiroPrograma\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\aline\\AppData\\Roaming\\NuGet\\NuGet.Config",
