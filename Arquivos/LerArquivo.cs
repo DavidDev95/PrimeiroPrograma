@@ -24,14 +24,23 @@ namespace Programa1.Arquivos
                     while ((linha = arquivo.ReadLine()) != null)
                     {
                         Console.WriteLine(linha);
+
                     }
                 }
+
+                Console.WriteLine("====================================================");
+                Console.WriteLine("Arquivo"+NumeroDeArquivo+" lido com sucesso!!!");
+                Console.WriteLine("====================================================\n");
+                Console.WriteLine("Pressione enter para voltar ao menu!");
             }
             string diretorio2 = Pasta() + "arq"+ NumeroDeArquivo + ".txt";
             if (File.Exists(diretorio2))
             {
                 Arquivos(NumeroDeArquivo + 1);
+                             
             }
+
         }
+
     }
 }
