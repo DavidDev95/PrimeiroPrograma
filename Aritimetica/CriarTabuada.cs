@@ -10,11 +10,12 @@ namespace Programa1.Aritimetica
     {
         public static void Tabuada(int Divisor)
         {
-            Console.WriteLine("==============================");
-            Console.WriteLine(" * Tabuada do" + Divisor + "*");
+            Console.WriteLine("====================================================");
+            Console.WriteLine(" Tabuada do " + Divisor);
             for (int i = 1; i <= 20; i++)
                 Console.WriteLine(Divisor + " X " + i + " = " + (Divisor * i));
-            Console.WriteLine("==============================");
+            Console.WriteLine("====================================================\n");
+            Console.WriteLine("Pressione Enter para voltar ao menu!!!");
         }
     }
 }

@@ -41,10 +41,12 @@ namespace Programa1.Dados
         /// Construtor sem parametros
         /// </summary>
         public Cliente() { }
-        
 
+        
         public void Gravar()
         {
+            
+                        
             var clientes = Cliente.ListaDeClientes();
             clientes.Add(this);
 
@@ -61,10 +63,9 @@ namespace Programa1.Dados
                 r.Close();
                  
             }
-
-
-
+            return;
         }
+        
         private static string PastaBaseDeDados()
         {
             return ConfigurationManager.AppSettings["Base_de_Cliente"];
